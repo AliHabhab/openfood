@@ -1,13 +1,14 @@
-export default function restaurant() {
+import Link from "next/link";
+
+export default function Restaurant() {
   return (
     <main className="bg-gray-100 min-h-screen w-screen">
       <main className="max-w-screen-2xl m-auto bg-white">
         {/* NAVBAR */}
         <nav className="bg-white p-2 flex justify-between">
-          <a href="" className="font-bold text-gray-700 text-2xl">
-            {" "}
+          <Link href="/" className="font-bold text-gray-700 text-2xl">
             OpenTable{" "}
-          </a>
+          </Link>
           <div>
             <div className="flex">
               <button className="bg-blue-400 text-white border p-1 px-4 rounded mr-3">
@@ -30,14 +31,12 @@ export default function restaurant() {
           <div className="bg-white w-[70%] rounded p-3 shadow">
             {/* RESAURANT NAVBAR */}
             <nav className="flex text-reg border-b pb-2">
-              <a href="" className="mr-7">
-                {" "}
-                Overview{" "}
-              </a>
-              <a href="" className="mr-7">
-                {" "}
-                Menu{" "}
-              </a>
+              <Link href="/restaurant/milestone-grill" className="mr-7">
+                Overview
+              </Link>
+              <Link href="/restaurant/milestone-grill/menu" className="mr-7">
+                Menu
+              </Link>
             </nav>
             {/* RESAURANT NAVBAR */} {/* TITLE */}
             <div className="mt-4 border-b pb-6">
@@ -139,7 +138,12 @@ export default function restaurant() {
               </div>
               <div className="my-3 flex flex-col">
                 <label htmlFor="">Party size</label>
-                <select name="" className="py-3 border-b font-light" id="">
+                <select
+                  name=""
+                  className="py-3 border-b font-light"
+                  id=""
+                  title="partysize"
+                >
                   <option value="">1 person</option>
                   <option value="">2 people</option>
                 </select>
@@ -150,11 +154,17 @@ export default function restaurant() {
                   <input
                     type="text"
                     className="py-3 border-b font-light w-28"
+                    title="date"
                   />
                 </div>
                 <div className="flex flex-col w-[48%]">
                   <label htmlFor="">Time</label>
-                  <select name="" id="" className="py-3 border-b font-light">
+                  <select
+                    name=""
+                    id=""
+                    className="py-3 border-b font-light"
+                    title="time"
+                  >
                     <option value="">7:30 AM</option>
                     <option value="">9:30 AM</option>
                   </select>
